@@ -9,6 +9,13 @@ provides-dynamic-lookup:
 - "didReceiveMemoryWarning"
 - "myWebView"
 - "switch1"
+- "switch2"
+- "switch3"
+- "switch4"
+- "switch5"
+- "switch6"
+- "switch7"
+- "switch8"
 - "viewDidLoad"
 depends-top-level:
 - !private "=="
@@ -120,6 +127,13 @@ depends-member:
 - !private ["So8NSObjectC", "load"]
 - ["So8NSObjectC", "myWebView"]
 - ["So8NSObjectC", "switch1"]
+- ["So8NSObjectC", "switch2"]
+- ["So8NSObjectC", "switch3"]
+- ["So8NSObjectC", "switch4"]
+- ["So8NSObjectC", "switch5"]
+- ["So8NSObjectC", "switch6"]
+- ["So8NSObjectC", "switch7"]
+- ["So8NSObjectC", "switch8"]
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So16NSObjectProtocolP", "URL"]
 - !private ["So16NSObjectProtocolP", "URLRequest"]
@@ -194,6 +208,13 @@ depends-member:
 - !private ["So11UIResponderC", "load"]
 - ["So11UIResponderC", "myWebView"]
 - ["So11UIResponderC", "switch1"]
+- ["So11UIResponderC", "switch2"]
+- ["So11UIResponderC", "switch3"]
+- ["So11UIResponderC", "switch4"]
+- ["So11UIResponderC", "switch5"]
+- ["So11UIResponderC", "switch6"]
+- ["So11UIResponderC", "switch7"]
+- ["So11UIResponderC", "switch8"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "URL"]
 - !private ["So30UIResponderStandardEditActionsP", "URLRequest"]
@@ -231,6 +252,13 @@ depends-member:
 - ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "myWebView"]
 - ["So16UIViewControllerC", "switch1"]
+- ["So16UIViewControllerC", "switch2"]
+- ["So16UIViewControllerC", "switch3"]
+- ["So16UIViewControllerC", "switch4"]
+- ["So16UIViewControllerC", "switch5"]
+- ["So16UIViewControllerC", "switch6"]
+- ["So16UIViewControllerC", "switch7"]
+- ["So16UIViewControllerC", "switch8"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", ""]
 - !private ["10Foundation3URLV", "init"]
@@ -244,6 +272,13 @@ depends-member:
 - ["14ArduinoControl14ViewControllerC", "init"]
 - ["14ArduinoControl14ViewControllerC", "myWebView"]
 - ["14ArduinoControl14ViewControllerC", "switch1"]
+- ["14ArduinoControl14ViewControllerC", "switch2"]
+- ["14ArduinoControl14ViewControllerC", "switch3"]
+- ["14ArduinoControl14ViewControllerC", "switch4"]
+- ["14ArduinoControl14ViewControllerC", "switch5"]
+- ["14ArduinoControl14ViewControllerC", "switch6"]
+- ["14ArduinoControl14ViewControllerC", "switch7"]
+- ["14ArduinoControl14ViewControllerC", "switch8"]
 - ["14ArduinoControl14ViewControllerC", "viewDidLoad"]
 - !private ["So9WKWebViewC", "load"]
 - !private ["s23_BidirectionalIndexableP", "init"]
@@ -373,4 +408,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "b0348de4c02458f59e97cee904296d3f"
+interface-hash: "ec637d4c185c0f288603005c50530682"

@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65.2 clang-900.0.37)"
 options: "b290afacf804e0aa7b95867e5fc5a9ce"
-build_time: [1509211791, 111531000]
+build_time: [1509214468, 840490000]
 inputs:
-  "/Users/Taivon/Documents/AAMU/SEMS-CCSG/ArduinoControl/ArduinoControl/ViewController.swift": [1509211787, 0]
+  "/Users/Taivon/Documents/AAMU/SEMS-CCSG/ArduinoControl/ArduinoControl/ViewController.swift": [1509214468, 0]
   "/Users/Taivon/Documents/AAMU/SEMS-CCSG/ArduinoControl/ArduinoControl/AppDelegate.swift": [1509207785, 0]

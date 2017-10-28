@@ -20,14 +20,17 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    var arduinoServer = "http://192.168.1.25/$"
+    
     @IBAction func switch1(_ sender: UISwitch) {
         if sender.isOn == true {
-            let url = URL(string: "http://192.168.1.25/$1")
+            let url = URL(string: arduinoServer+"1")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
         else{
-            let url = URL(string: "http://192.168.1.25/$2")
+            let url = URL(string: arduinoServer+"2")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
@@ -35,24 +38,24 @@ class ViewController: UIViewController {
     
     @IBAction func switch2(_ sender: UISwitch) {
         if sender.isOn == true {
-            let url = URL(string: "http://192.168.1.25/$3")
+            let url = URL(string: arduinoServer+"3")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
         else{
-            let url = URL(string: "http://192.168.1.25/$4")
+            let url = URL(string: arduinoServer+"4")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
     }
     @IBAction func switch3(_ sender: UISwitch) {
         if sender.isOn == true {
-            let url = URL(string: "http://192.168.1.25/$5")
+            let url = URL(string: arduinoServer+"5")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
         else{
-            let url = URL(string: "http://192.168.1.25/$6")
+            let url = URL(string: arduinoServer+"6")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
@@ -60,24 +63,24 @@ class ViewController: UIViewController {
     
     @IBAction func switch4(_ sender: UISwitch) {
         if sender.isOn == true {
-            let url = URL(string: "http://192.168.1.25/$7")
+            let url = URL(string: arduinoServer+"7")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
         else{
-            let url = URL(string: "http://192.168.1.25/$8")
+            let url = URL(string: arduinoServer+"8")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
     }
     @IBAction func switch5(_ sender: UISwitch) {
         if sender.isOn == true {
-            let url = URL(string: "http://192.168.1.25/$9")
+            let url = URL(string: arduinoServer+"9")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
         else{
-            let url = URL(string: "http://192.168.1.25/$0")
+            let url = URL(string: arduinoServer+"0")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
@@ -85,24 +88,24 @@ class ViewController: UIViewController {
     
     @IBAction func switch6(_ sender: UISwitch) {
         if sender.isOn == true {
-            let url = URL(string: "http://192.168.1.25/$a")
+            let url = URL(string: arduinoServer+"a")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
         else{
-            let url = URL(string: "http://192.168.1.25/$b")
+            let url = URL(string: arduinoServer+"b")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
     }
     @IBAction func switch7(_ sender: UISwitch) {
         if sender.isOn == true {
-            let url = URL(string: "http://192.168.1.25/$c")
+            let url = URL(string: arduinoServer+"c")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
         else{
-            let url = URL(string: "http://192.168.1.25/$d")
+            let url = URL(string: arduinoServer+"d")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
@@ -110,12 +113,12 @@ class ViewController: UIViewController {
     
     @IBAction func switch8(_ sender: UISwitch) {
         if sender.isOn == true {
-            let url = URL(string: "http://192.168.1.25/$e")
+            let url = URL(string: arduinoServer+"e")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
         else{
-            let url = URL(string: "http://192.168.1.25/$f")
+            let url = URL(string: arduinoServer+"f")
             let req = URLRequest(url: url!)
             myWebView.load(req)
         }
