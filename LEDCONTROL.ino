@@ -1,36 +1,19 @@
 /*
-  Web Server
 
- A simple web server that shows the value of the analog input pins.
- using an Arduino Wiznet Ethernet shield.
-
- Circuit:
- * Ethernet shield attached to pins 10, 11, 12, 13
- * Analog inputs attached to pins A0 through A5 (optional)
-
- created 18 Dec 2009
- by David A. Mellis
- modified 9 Apr 2012
- by Tom Igoe
- modified 02 Sept 2015
- by Arturo Guadalupi
 
  */
 
 #include <SPI.h>
 #include <Ethernet.h>
-
-/*-----( Import needed libraries )-----*/
-/*-----( Declare Constants )-----*/
+//constant declarations
 #define RELAY_ON 0
 #define RELAY_OFF 1
-/*-----( Declare objects )-----*/
-/*-----( Declare Variables )-----*/
+
 #define Relay_1  2  // Arduino Digital I/O pin number
 #define Relay_2  3
 #define Relay_3  4
 #define Relay_4  5
-#define Relay_5  6  // Arduino Digital I/O pin number
+#define Relay_5  6  
 #define Relay_6  7
 #define Relay_7  8
 #define Relay_8  9
@@ -40,12 +23,9 @@ boolean incoming = 0;
 // Enter a MAC address and IP address for your controller below.
 // The IP address will be dependent on your local network:
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xDD};
-//byte mac[] = { 0x00, 0xAA, 0xBB, 0xCC, 0xDA, 0x02 };
-//192.168.1.25
-//IPAddress ip(10, 10, 10, 25);
 IPAddress ip(192, 168, 1, 25);
 // Initialize the Ethernet server library
-// with the IP address and port you want to use
+// with the IP address that's not taken and port you want to use 
 // (port 80 is default for HTTP):
 EthernetServer server(80);
 
@@ -55,7 +35,7 @@ void setup() {
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
-
+  //Initialize the relays to off
   digitalWrite(Relay_1, RELAY_OFF);
   digitalWrite(Relay_2, RELAY_OFF);
   digitalWrite(Relay_3, RELAY_OFF);
@@ -65,7 +45,7 @@ void setup() {
   digitalWrite(Relay_7, RELAY_OFF);
   digitalWrite(Relay_8, RELAY_OFF);
   
-//---( THEN set pins as outputs )----  
+  //Set pins to output mode
   pinMode(Relay_1, OUTPUT);   
   pinMode(Relay_2, OUTPUT);  
   pinMode(Relay_3, OUTPUT);  
@@ -109,105 +89,73 @@ void loop() {
         // if we received a $ sign then we have received a request
           incoming = 1; 
         }
-                //Check for the URL string $1 or $2
+        
         if(incoming == 1){
           Serial.println(c);
           // printing the result on the serial port (on your computer)
           if(c == '1'){
             Serial.println("LED 1 ON");
-            // printing "ON" to your screen.
-            digitalWrite(Relay_1,RELAY_ON );
-            // setting the 2nd pin state to HIGH (turning on the LED)
+            digitalWrite(Relay_1,RELAY_ON )
           }
           if(c == '2'){
             Serial.println("LED 1 OFF");
-            // printing "OFF" to your screen.
             digitalWrite(Relay_1, RELAY_OFF);
-            // setting the our LED state to off (turning it off)
           }
           if(c == '3'){
-            Serial.println("ON");
-            // printing "ON" to your screen.
+            Serial.println("LED 2 ON");
             digitalWrite(Relay_2,RELAY_ON );
-            // setting the 2nd pin state to HIGH (turning on the LED)
           }
           if(c == '4'){
             Serial.println("LED 2 OFF");
-            // printing "OFF" to your screen.
             digitalWrite(Relay_2, RELAY_OFF);
-            // setting the our LED state to off (turning it off)
           }
           if(c == '5'){
-            Serial.println("ON");
-            // printing "ON" to your screen.
+            Serial.println("LED 3 ON");
             digitalWrite(Relay_3,RELAY_ON );
-            // setting the 2nd pin state to HIGH (turning on the LED)
           }
           if(c == '6'){
             Serial.println("LED 3 OFF");
-            // printing "OFF" to your screen.
             digitalWrite(Relay_3, RELAY_OFF);
-            // setting the our LED state to off (turning it off)
           }
           if(c == '7'){
-            Serial.println("ON");
-            // printing "ON" to your screen.
+            Serial.println("LED 4 ON");
             digitalWrite(Relay_4,RELAY_ON );
-            // setting the 2nd pin state to HIGH (turning on the LED)
           }
           if(c == '8'){
             Serial.println("LED 4 OFF");
-            // printing "OFF" to your screen.
             digitalWrite(Relay_4, RELAY_OFF);
-            // setting the our LED state to off (turning it off)
           }
           if(c == '9'){
-            Serial.println("ON");
-            // printing "ON" to your screen.
+            Serial.println("LED 5 ON");
             digitalWrite(Relay_5,RELAY_ON );
-            // setting the 2nd pin state to HIGH (turning on the LED)
           }
           if(c == '0'){
             Serial.println("LED 5 OFF");
-            // printing "OFF" to your screen.
             digitalWrite(Relay_5, RELAY_OFF);
-            // setting the our LED state to off (turning it off)
           }
           if(c == 'a'){
-            Serial.println("ON");
-            // printing "ON" to your screen.
+            Serial.println("LED 6 ON");
             digitalWrite(Relay_6,RELAY_ON );
-            // setting the 2nd pin state to HIGH (turning on the LED)
           }
           if(c == 'b'){
-            Serial.println("OFF");
-            // printing "OFF" to your screen.
+            Serial.println("LED 6 OFF");
             digitalWrite(Relay_6, RELAY_OFF);
-            // setting the our LED state to off (turning it off)
           }
           if(c == 'c'){
-            Serial.println("ON");
-            // printing "ON" to your screen.
+            Serial.println("LED 7 ON");
             digitalWrite(Relay_7,RELAY_ON );
-            // setting the 2nd pin state to HIGH (turning on the LED)
           }
           if(c == 'd'){
-            Serial.println("OFF");
-            // printing "OFF" to your screen.
+            Serial.println("LED 7 OFF");
             digitalWrite(Relay_7, RELAY_OFF);
-            // setting the our LED state to off (turning it off)
           }
           if(c == 'e'){
-            Serial.println("ON");
-            // printing "ON" to your screen.
+            Serial.println("LED 8 ON");
             digitalWrite(Relay_8,RELAY_ON );
-            // setting the 2nd pin state to HIGH (turning on the LED)
           }
           if(c == 'f'){
-            Serial.println("OFF");
-            // printing "OFF" to your screen.
+            Serial.println("LED 8 OFF");
             digitalWrite(Relay_8, RELAY_OFF);
-            // setting the our LED state to off (turning it off)
           }
           
         
